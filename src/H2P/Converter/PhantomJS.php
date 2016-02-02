@@ -276,8 +276,8 @@ class PhantomJS extends ConverterAbstract
             'destination' => $destination,
             'request' => $request,
         ) + $this->options;
-
-        $result = json_decode(trim(shell_exec($this->getBinPath() . ' ' . escapeshellarg(json_encode($args)))));
+        $command = $this->getBinPath() . ' ' . base64_encode(json_encode($args));
+        $result = json_decode(trim(shell_exec($command)));
 
         if (!$result->success) {
             throw new Exception('Error while executing PhantomJS: "' . $result->response . '"');

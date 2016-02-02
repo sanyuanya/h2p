@@ -32,6 +32,8 @@
 
 var page = require('webpage').create();
 var args = require('system').args;
+var Base64 = require('./Base64').Base64;
+var base64 = new Base64();
 
 function errorHandler(e) {
     console.log(JSON.stringify({
@@ -49,7 +51,8 @@ try {
     }
 
     // Take all options in one JSON param
-    var options = JSON.parse(args[1]);
+    // var options = JSON.parse(args[1]);
+    var options = JSON.parse(base64.decode(args[1]));
 
     page.customHeaders = options.request.headers;
     phantom.cookies = options.request.cookies;
