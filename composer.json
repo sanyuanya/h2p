@@ -1,14 +1,14 @@
 {
-    "name": "kriansa/h2p",
+    "name": "zyaboutblank/h2p",
     "type": "library",
-    "description": "A simple library to convert HTML files to PDF using PhantomJS",
+    "description": "A simple library to convert HTML files to PDF using PhantomJS -- a little modify",
     "keywords": ["html", "pdf", "phantomjs"],
-    "homepage": "http://github.com/kriansa/h2p",
+    "homepage": "http://github.com/zyaboutblank/h2p",
     "license": "MIT",
     "authors": [
         {
-            "name": "Daniel Garajau",
-            "email": "kriansa@facebook.com"
+            "name": "zy",
+            "email": "qzhaoyue@qq.com"
         }
     ],
     "require": {
